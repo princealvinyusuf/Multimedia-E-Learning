@@ -7,6 +7,11 @@
         android:title="Student Journey"/>
 
     <item
+        android:id="@+id/navigation_motion_library"
+        android:icon="@drawable/book"
+        android:title="MoLi"/>
+
+    <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/achievement"
         android:title="Achievement"/>

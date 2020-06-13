@@ -21,6 +21,7 @@ import com.polibatam.meler.model.adapter.CoursesProgGridAdapter;
 import com.polibatam.meler.model.data.Course;
 import com.polibatam.meler.model.data.Level;
 import com.polibatam.meler.model.persistence.LessonsLDH;
+import com.polibatam.meler.view.MotionLibraryActivity;
 import com.polibatam.meler.view.layout.ExpandableHeightGridView;
 import com.polibatam.meler.view.layout.FitDoughnut;
 import com.polibatam.meler.view.register.ProfileActivity;
@@ -41,6 +42,11 @@ public class AchieveActivity extends AppCompatActivity {
 
                 case R.id.navigation_explore:
                     intent = new Intent(AchieveActivity.this, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
+                    return true;
+                case R.id.navigation_motion_library:
+                    intent = new Intent(AchieveActivity.this, MotionLibraryActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     return true;

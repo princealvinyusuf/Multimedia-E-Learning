@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.storyboard.AchieveActivity"/>
+        <activity android:name=".view.MotionLibraryActivity"></activity>
+        <activity android:name=".view.storyboard.AchieveActivity" />
         <activity android:name=".view.storyboard.QuizActivity" />
         <activity android:name=".view.storyboard.SectionActivity" />
         <activity android:name=".view.register.ProfileActivity" />
@@ -19,8 +20,7 @@
         <activity
             android:name=".view.register.SignUpActivity"
             android:theme="@style/AppThemeLogin2" />
-        <activity android:name=".MainActivity">
-        </activity>
+        <activity android:name=".MainActivity"></activity>
         <activity
             android:name=".view.intro.SplashIntroActivity"
             android:theme="@style/Theme.Intro" />
