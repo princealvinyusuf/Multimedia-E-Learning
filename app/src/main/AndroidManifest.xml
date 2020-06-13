@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.polibatam.meler">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".view.storyboard.AchieveActivity"/>
+        <activity android:name=".view.storyboard.QuizActivity" />
+        <activity android:name=".view.storyboard.SectionActivity" />
+        <activity android:name=".view.register.ProfileActivity" />
+        <activity
+            android:name=".view.register.SignInActivity"
+            android:theme="@style/AppThemeLogin" />
+        <activity
+            android:name=".view.register.SignUpActivity"
+            android:theme="@style/AppThemeLogin2" />
+        <activity android:name=".MainActivity">
+        </activity>
+        <activity
+            android:name=".view.intro.SplashIntroActivity"
+            android:theme="@style/Theme.Intro" />
+        <activity
+            android:name=".view.intro.SplashActivity"
+            android:theme="@style/AppThemeLogin">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

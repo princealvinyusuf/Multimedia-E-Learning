@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "557010738215",
+    "firebase_url": "https://meler-60cc1.firebaseio.com",
+    "project_id": "meler-60cc1",
+    "storage_bucket": "meler-60cc1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:557010738215:android:86ac45bc0797ba324d8202",
+        "android_client_info": {
+          "package_name": "com.polibatam.meler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "557010738215-igqsde140v0ivng1cuvq7e4navk6n6cu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.polibatam.meler",
+            "certificate_hash": "4edf7a2f95c4767bee0dc44adefc7df3baa17302"
+          }
+        },
+        {
+          "client_id": "557010738215-l5fgt0fqshtd1fgno8e5o2p2m0rp2pdl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJI7N4bIeMXoMzIUc242O1B6tK3KM38Sc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "557010738215-l5fgt0fqshtd1fgno8e5o2p2m0rp2pdl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
