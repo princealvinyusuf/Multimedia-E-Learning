@@ -3,15 +3,20 @@ package com.polibatam.meler.view;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.GridLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
@@ -23,38 +28,40 @@ import com.polibatam.meler.view.storyboard.AchieveActivity;
 
 public class MotionLibraryActivity extends AppCompatActivity {
 
-    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
-            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+    GridLayout mainGrid;
 
-        @Override
-        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-            Intent intent;
-            switch (item.getItemId()) {
-
-                case R.id.navigation_explore:
-                    intent = new Intent(MotionLibraryActivity.this, MainActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent);
-                    return true;
-                case R.id.navigation_profile:
-                    intent = new Intent(MotionLibraryActivity.this, AchieveActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent);
-                    return true;
-                case R.id.navigation_motion_library:
-                    return  true;
-            }
-            return false;
-        }
-    };
+//    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+//            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+//
+//        @Override
+//        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+//            Intent intent;
+//            switch (item.getItemId()) {
+//
+//                case R.id.navigation_explore:
+//                    intent = new Intent(MotionLibraryActivity.this, MainActivity.class);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+//                    startActivity(intent);
+//                    return true;
+//                case R.id.navigation_profile:
+//                    intent = new Intent(MotionLibraryActivity.this, AchieveActivity.class);
+//                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+//                    startActivity(intent);
+//                    return true;
+//                case R.id.navigation_motion_library:
+//                    return  true;
+//            }
+//            return false;
+//        }
+//    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_motion_library);
 
-        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
-        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+//        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+//        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
         final ActionBar abar = getSupportActionBar();
         View viewActionBar = getLayoutInflater().inflate(R.layout.actionbar_titletext_layout, null);
@@ -67,6 +74,10 @@ public class MotionLibraryActivity extends AppCompatActivity {
         abar.setCustomView(viewActionBar, params);
         abar.setDisplayShowCustomEnabled(true);
         abar.setDisplayShowTitleEnabled(false);
+
+        mainGrid = (GridLayout) findViewById(R.id.mainGrid);
+
+        setSingleEvent(mainGrid);
 
     }
 
@@ -93,4 +104,24 @@ public class MotionLibraryActivity extends AppCompatActivity {
         }
         return true;
     }
+
+    private void setSingleEvent(GridLayout mainGrid) {
+        //Loop all child item of Main Grid
+        for (int i = 0; i < mainGrid.getChildCount(); i++) {
+            //You can see , all child item is CardView , so we just cast object to CardView
+            CardView cardView = (CardView) mainGrid.getChildAt(i);
+            final int finalI = i;
+            cardView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    Intent intent = new Intent(MotionLibraryActivity.this, MainActivity.class);
+                    intent.putExtra("info","This is activity from card item index  "+finalI);
+                    startActivity(intent);
+
+                }
+            });
+        }
+    }
+
 }
