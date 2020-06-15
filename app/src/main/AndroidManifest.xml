@@ -7,10 +7,11 @@
     <uses-feature
         android:name="android.software.leanback"
         android:required="false" />
-
     <uses-feature
         android:name="android.hardware.touchscreen"
         android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -19,7 +20,10 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.MotionLibraryActivity"/>
+        <activity android:name=".view.storyboard.VideoActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"/>
+        <activity android:name=".view.MotionLibraryActivity" />
         <activity android:name=".view.storyboard.AchieveActivity" />
         <activity android:name=".view.storyboard.QuizActivity" />
         <activity android:name=".view.storyboard.SectionActivity" />
@@ -30,7 +34,7 @@
         <activity
             android:name=".view.register.SignUpActivity"
             android:theme="@style/AppThemeLogin2" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".MainActivity" />
         <activity
             android:name=".view.intro.SplashIntroActivity"
             android:theme="@style/Theme.Intro" />

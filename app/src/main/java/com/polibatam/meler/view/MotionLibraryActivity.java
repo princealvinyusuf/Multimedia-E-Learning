@@ -25,6 +25,7 @@ import com.polibatam.meler.R;
 import com.polibatam.meler.view.register.ProfileActivity;
 import com.polibatam.meler.view.register.SignInActivity;
 import com.polibatam.meler.view.storyboard.AchieveActivity;
+import com.polibatam.meler.view.storyboard.VideoActivity;
 
 public class MotionLibraryActivity extends AppCompatActivity {
 
@@ -116,7 +117,7 @@ public class MotionLibraryActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
 
-                    Intent intent = new Intent(MotionLibraryActivity.this, MainActivity.class);
+                    Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
                     intent.putExtra("info","This is activity from card item index  "+finalI);
                     startActivity(intent);
 
