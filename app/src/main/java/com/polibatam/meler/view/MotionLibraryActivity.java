@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.fragment.app.Fragment;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.polibatam.meler.MainActivity;
 import com.polibatam.meler.R;
+import com.polibatam.meler.controller.CheckNetwork;
 import com.polibatam.meler.view.register.ProfileActivity;
 import com.polibatam.meler.view.register.SignInActivity;
 import com.polibatam.meler.view.storyboard.AchieveActivity;
@@ -81,6 +83,15 @@ public class MotionLibraryActivity extends AppCompatActivity {
 
         setSingleEvent(mainGrid);
 
+        if(CheckNetwork.isInternetAvailable(MotionLibraryActivity.this))
+        {
+//            Toast.makeText(MotionLibraryActivity.this, "Make Sure Your Internet Connection Is Stable", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(MotionLibraryActivity.this, "No Internet Connection", Toast.LENGTH_LONG).show();
+        }
+
     }
 
     @Override
@@ -108,18 +119,67 @@ public class MotionLibraryActivity extends AppCompatActivity {
     }
 
     private void setSingleEvent(GridLayout mainGrid) {
-        //Loop all child item of Main Grid
+        //Loop all child item for main grid
         for (int i = 0; i < mainGrid.getChildCount(); i++) {
-            //You can see , all child item is CardView , so we just cast object to CardView
-            CardView cardView = (CardView) mainGrid.getChildAt(i);
+            //All child item is cardView, just cast object to cardView
+            final CardView cardView = (CardView) mainGrid.getChildAt(i);
             final int finalI = i;
             cardView.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View view) {
-
-                    Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
-                    intent.putExtra("info","This is activity from card item index  "+finalI);
-                    startActivity(intent);
+                public void onClick(View v) {
+                    if (finalI == 0 ) {
+                        Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
+                        intent.putExtra(VideoActivity.EXTRA_URL, "");
+                        startActivity(intent);
+                    }
+                    else if (finalI == 1) {
+                        Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
+                        intent.putExtra(VideoActivity.EXTRA_URL, "https://res.cloudinary.com/polibatam/video/upload/v1592193241/Materi_1_Nirmana_gpawtw.mp4");
+                        startActivity(intent);
+                    }
+                    else if (finalI == 2 ) {
+                        Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
+                        intent.putExtra(VideoActivity.EXTRA_URL, "https://res.cloudinary.com/polibatam/video/upload/v1592196910/materi_2_warna_oah30m.mp4");
+                        startActivity(intent);
+                    }
+                    else if (finalI == 3 ) {
+                        Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
+                        intent.putExtra(VideoActivity.EXTRA_URL, "https://res.cloudinary.com/polibatam/video/upload/v1592197327/Materi_3_Tipografi_jrdqwn.mp4");
+                        startActivity(intent);
+                    }
+                    else if (finalI == 4 ) {
+                        Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
+                        intent.putExtra(VideoActivity.EXTRA_URL, "");
+                        startActivity(intent);
+                    }
+                    else if (finalI == 5 ) {
+                        Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
+                        intent.putExtra(VideoActivity.EXTRA_URL, "https://res.cloudinary.com/polibatam/video/upload/v1592195956/Materi_6_Layout_gjqeow.mp4");
+                        startActivity(intent);
+                    }
+                    else if (finalI == 6 ) {
+                        Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
+                        intent.putExtra(VideoActivity.EXTRA_URL, "");
+                        startActivity(intent);
+                    }
+                    else if (finalI == 7 ) {
+                        Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
+                        intent.putExtra(VideoActivity.EXTRA_URL, "");
+                        startActivity(intent);
+                    }
+                    else if (finalI == 8 ) {
+                        Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
+                        intent.putExtra(VideoActivity.EXTRA_URL, "");
+                        startActivity(intent);
+                    }
+                    else if (finalI == 9 ) {
+                        Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
+                        intent.putExtra(VideoActivity.EXTRA_URL, "https://res.cloudinary.com/polibatam/video/upload/v1592195450/Materi_9_ilustrasi_cnqujx.mp4");
+                        startActivity(intent);
+                    }
+                    else {
+                        Toast.makeText(MotionLibraryActivity.this, "Please select one of this item", Toast.LENGTH_SHORT).show();
+                    }
 
                 }
             });

@@ -18,6 +18,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.polibatam.meler.MainActivity;
 import com.polibatam.meler.R;
+import com.polibatam.meler.controller.CheckNetwork;
+import com.polibatam.meler.view.MotionLibraryActivity;
 import com.polibatam.meler.view.intro.SplashIntroActivity;
 
 public class SignInActivity extends AppCompatActivity implements View.OnClickListener{
@@ -53,6 +55,15 @@ public class SignInActivity extends AppCompatActivity implements View.OnClickLis
         findViewById(R.id.buttonLogin).setOnClickListener(this);
 
         mAuth = FirebaseAuth.getInstance();
+
+        if(CheckNetwork.isInternetAvailable(SignInActivity.this))
+        {
+//            Toast.makeText(MotionLibraryActivity.this, "Make Sure Your Internet Connection Is Stable", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(SignInActivity.this, "No Internet Connection", Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override

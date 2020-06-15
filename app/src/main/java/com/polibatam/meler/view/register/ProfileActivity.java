@@ -34,6 +34,7 @@ import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 import com.polibatam.meler.MainActivity;
 import com.polibatam.meler.R;
+import com.polibatam.meler.controller.CheckNetwork;
 
 import java.io.IOException;
 
@@ -77,6 +78,15 @@ public class ProfileActivity extends AppCompatActivity {
 
         getSupportActionBar().setTitle("Profile");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        if(CheckNetwork.isInternetAvailable(ProfileActivity.this))
+        {
+//            Toast.makeText(MotionLibraryActivity.this, "Make Sure Your Internet Connection Is Stable", Toast.LENGTH_SHORT).show();
+        }
+        else
+        {
+            Toast.makeText(ProfileActivity.this, "No Internet Connection", Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
