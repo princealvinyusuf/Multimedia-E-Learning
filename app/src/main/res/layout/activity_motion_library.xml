@@ -72,13 +72,12 @@
                             android:src="@drawable/x1" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center_horizontal"
                             android:text="Pendahuluan"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
-                            android:textSize="18sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -111,13 +110,12 @@
                             android:src="@drawable/x2" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center_horizontal"
                             android:text="Nirmana"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
-                            android:textSize="18sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -150,13 +148,12 @@
                             android:src="@drawable/x3" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center_horizontal"
                             android:text="Warna"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
-                            android:textSize="18sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -189,13 +186,12 @@
                             android:src="@drawable/x4" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center_horizontal"
                             android:text="Tipografi"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
-                            android:textSize="18sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -228,13 +224,12 @@
                             android:src="@drawable/x5" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center_horizontal"
                             android:text="Simbol &amp; Icon"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
-                            android:textSize="16sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -267,13 +262,12 @@
                             android:src="@drawable/x6" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center_horizontal"
                             android:text="Logo"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
-                            android:textSize="18sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -306,13 +300,12 @@
                             android:src="@drawable/x7" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center_horizontal"
                             android:text="Layout"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
-                            android:textSize="18sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -345,13 +338,12 @@
                             android:src="@drawable/x8" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center_horizontal"
                             android:text="Advertising"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
-                            android:textSize="18sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -384,13 +376,12 @@
                             android:src="@drawable/x9" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center_horizontal"
                             android:text="Desain Karakter"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
-                            android:textSize="16sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -423,13 +414,12 @@
                             android:src="@drawable/x10" />
 
                         <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
                             android:layout_gravity="center_horizontal"
                             android:text="Ilustrasi"
                             android:textAlignment="center"
                             android:textColor="@android:color/black"
-                            android:textSize="18sp"
                             android:textStyle="bold" />
 
                     </LinearLayout>
@@ -447,15 +437,15 @@
         android:id="@+id/navigation"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="0dp"
-        android:layout_marginStart="0dp"
-        android:hapticFeedbackEnabled="true"
-        android:background="@android:color/white"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@android:color/white"
+        android:hapticFeedbackEnabled="true"
         app:itemIconTint="@color/colorAccent"
         app:itemTextColor="@color/colorAccent"
-        app:menu="@menu/tabbar"/>
+        app:menu="@menu/tabbar" />
 
 </RelativeLayout>
