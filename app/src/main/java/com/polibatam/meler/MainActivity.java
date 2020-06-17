@@ -21,6 +21,7 @@ import com.polibatam.meler.model.CoursesListAdapter;
 import com.polibatam.meler.model.data.Course;
 import com.polibatam.meler.model.persistence.LessonsLDH;
 import com.polibatam.meler.view.MotionLibraryActivity;
+import com.polibatam.meler.view.handson.HandsonActivity;
 import com.polibatam.meler.view.intro.SplashIntroActivity;
 import com.polibatam.meler.view.register.ProfileActivity;
 import com.polibatam.meler.view.register.SignInActivity;
@@ -57,6 +58,11 @@ public class MainActivity extends AppCompatActivity {
                     return true;
                 case R.id.navigation_motion_library:
                     intent = new Intent(MainActivity.this, MotionLibraryActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
+                    return true;
+                case R.id.navigation_handson:
+                    intent = new Intent(MainActivity.this, HandsonActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     return true;

@@ -24,6 +24,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.polibatam.meler.MainActivity;
 import com.polibatam.meler.R;
 import com.polibatam.meler.controller.CheckNetwork;
+import com.polibatam.meler.view.handson.HandsonActivity;
 import com.polibatam.meler.view.register.ProfileActivity;
 import com.polibatam.meler.view.register.SignInActivity;
 import com.polibatam.meler.view.storyboard.AchieveActivity;
@@ -52,6 +53,11 @@ public class MotionLibraryActivity extends AppCompatActivity {
                     startActivity(intent);
                     return true;
                 case R.id.navigation_motion_library:
+                    return true;
+                case R.id.navigation_handson:
+                    intent = new Intent(MotionLibraryActivity.this, HandsonActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
                     return true;
             }
             return false;
