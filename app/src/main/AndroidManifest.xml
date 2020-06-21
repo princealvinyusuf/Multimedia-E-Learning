@@ -22,7 +22,6 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.handson.HandsonActivity"></activity>
         <activity
             android:name=".view.storyboard.VideoActivity"
             android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"

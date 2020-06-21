@@ -2,13 +2,12 @@ package com.polibatam.meler.view;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-import androidx.fragment.app.Fragment;
 
-import android.app.Activity;
+import android.content.DialogInterface;
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -24,7 +23,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.polibatam.meler.MainActivity;
 import com.polibatam.meler.R;
 import com.polibatam.meler.controller.CheckNetwork;
-import com.polibatam.meler.view.handson.HandsonActivity;
 import com.polibatam.meler.view.register.ProfileActivity;
 import com.polibatam.meler.view.register.SignInActivity;
 import com.polibatam.meler.view.storyboard.AchieveActivity;
@@ -53,11 +51,6 @@ public class MotionLibraryActivity extends AppCompatActivity {
                     startActivity(intent);
                     return true;
                 case R.id.navigation_motion_library:
-                    return true;
-                case R.id.navigation_handson:
-                    intent = new Intent(MotionLibraryActivity.this, HandsonActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent);
                     return true;
             }
             return false;
@@ -191,5 +184,25 @@ public class MotionLibraryActivity extends AppCompatActivity {
             });
         }
     }
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("Closing Meler")
+                .setMessage("Are you sure you want to leave the courses?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finishAffinity();
+                        System.exit(0);
+                    }
+
+                })
+                .setNegativeButton("No", null)
+                .show();
+    }
+
 
 }

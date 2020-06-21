@@ -11,10 +11,6 @@
         android:icon="@drawable/book"
         android:title="MoLi"/>
 
-    <item
-        android:id="@+id/navigation_handson"
-        android:icon="@drawable/handson"
-        android:title="Hands-On"/>
 
     <item
         android:id="@+id/navigation_profile"

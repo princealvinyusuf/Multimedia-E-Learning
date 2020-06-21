@@ -2,8 +2,10 @@ package com.polibatam.meler.view.storyboard;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -22,7 +24,6 @@ import com.polibatam.meler.model.data.Course;
 import com.polibatam.meler.model.data.Level;
 import com.polibatam.meler.model.persistence.LessonsLDH;
 import com.polibatam.meler.view.MotionLibraryActivity;
-import com.polibatam.meler.view.handson.HandsonActivity;
 import com.polibatam.meler.view.layout.ExpandableHeightGridView;
 import com.polibatam.meler.view.layout.FitDoughnut;
 import com.polibatam.meler.view.register.ProfileActivity;
@@ -52,11 +53,6 @@ public class AchieveActivity extends AppCompatActivity {
                     startActivity(intent);
                     return true;
                 case R.id.navigation_profile:
-                    return true;
-                case R.id.navigation_handson:
-                    intent = new Intent(AchieveActivity.this, HandsonActivity.class);
-                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                    startActivity(intent);
                     return true;
             }
             return false;
@@ -133,4 +129,24 @@ public class AchieveActivity extends AppCompatActivity {
         }
         return true;
     }
+
+    @Override
+    public void onBackPressed() {
+        new AlertDialog.Builder(this)
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setTitle("Closing Meler")
+                .setMessage("Are you sure you want to leave the courses?")
+                .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        finishAffinity();
+                        System.exit(0);
+                    }
+
+                })
+                .setNegativeButton("No", null)
+                .show();
+    }
+
 }
