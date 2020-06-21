@@ -14,6 +14,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
 
     <application
         android:allowBackup="true"
@@ -22,10 +23,6 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity
-            android:name=".view.storyboard.VideoActivity"
-            android:configChanges="orientation|keyboardHidden|screenLayout|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
         <activity android:name=".view.MotionLibraryActivity" />
         <activity android:name=".view.storyboard.AchieveActivity" />
         <activity android:name=".view.storyboard.QuizActivity" />
@@ -50,6 +47,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".view.storyboard.VideoActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:supportsPictureInPicture="true"/>
+        <service android:name=".controller.VideoDownloadService" />
     </application>
 
 </manifest>
