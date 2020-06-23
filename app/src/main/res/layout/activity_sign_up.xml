@@ -34,25 +34,39 @@
             android:paddingLeft="15dp"
             android:paddingRight="15dp">
 
-            <EditText
-                android:id="@+id/edtTextEmail"
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:hint="@string/student_email"
-                android:inputType="textEmailAddress"
-                android:paddingBottom="15dp"
-                android:textColorHint="@color/colorBlue4"/>
+                app:passwordToggleTint="@color/colorAccent">
 
-            <EditText
-                android:id="@+id/edtTextPassword"
+                <EditText
+                    android:id="@+id/edtTextEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/student_email"
+                    android:inputType="textEmailAddress"
+                    android:paddingBottom="15dp"
+                    android:textColorHint="@color/colorBlue4"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif"
-                android:hint="@string/password"
-                android:inputType="textPassword"
-                android:paddingBottom="15dp"
-                android:textColorHint="@color/colorBlue4"/>
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@android:color/black">
+
+                <EditText
+                    android:id="@+id/edtTextPassword"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif"
+                    android:hint="@string/password"
+                    android:inputType="textPassword"
+                    android:paddingBottom="15dp"
+                    android:textColorHint="@color/colorBlue4"/>
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/buttonSignUp"
