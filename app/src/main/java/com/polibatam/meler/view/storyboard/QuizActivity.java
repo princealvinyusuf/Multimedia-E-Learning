@@ -34,7 +34,7 @@ public class QuizActivity extends AppCompatActivity {
     public static final String A_SEP = "<->";
     boolean[] results;
 
-    private TextView lessontitleTv, questiontitleTv;
+    private TextView lessontitleTv, questiontitleTv, tap_next_label;
     private Button[] answersBt;
     private ImageView[] resqIv;
     private RelativeLayout emptyview;
@@ -44,6 +44,9 @@ public class QuizActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
+
+        tap_next_label = findViewById(R.id.tap_next);
+        tap_next_label.setVisibility(View.GONE);
 
         Intent intent = getIntent();
         lessonid = intent.getIntExtra("lessonid", 0);
@@ -102,13 +105,16 @@ public class QuizActivity extends AppCompatActivity {
 
             if(tot == 10){
                 tvCompl.setText("Perfect!");
+                tap_next_label.setVisibility(View.GONE);
             } else if (tot>=7){
                 tvCompl.setText("Well Done!");
+                tap_next_label.setVisibility(View.GONE);
             } else {
                 tvCompl.setText("Try Again!");
                 tvCompl.setTextColor(getResources().getColor(R.color.color_red));
                 TextView tvExtra = dialogView.findViewById(R.id.tvextra);
                 tvExtra.setVisibility(View.VISIBLE);
+                tap_next_label.setVisibility(View.GONE);
             }
 
             String res = "Score:\n" + Integer.toString(tot) + "/10";
@@ -163,6 +169,7 @@ public class QuizActivity extends AppCompatActivity {
         String[] parts = questions[curq].split(A_SEP);
         questiontitleTv.setText(parts[0]);
         final int correctans;
+        tap_next_label.setVisibility(View.GONE);
 
         if(parts.length == 2){
             // true or false
@@ -194,6 +201,7 @@ public class QuizActivity extends AppCompatActivity {
                 answersBt[i].setVisibility(View.VISIBLE);
                 answersBt[i].setBackground(getResources().getDrawable(R.drawable.answerbox));
                 answersBt[i].setText(parts[list.get(i)+1]);
+
             }
         }
 
@@ -204,6 +212,11 @@ public class QuizActivity extends AppCompatActivity {
                 results[curq] = true;
                 resqIv[curq].setBackground(getResources().getDrawable(R.drawable.answerboxcorrect));
                 emptyview.setVisibility(View.VISIBLE);
+                tap_next_label.setVisibility(View.VISIBLE);
+
+                if (curq == 9) {
+                    tap_next_label.setText("Tap To Finish");
+                }
             }
         });
 
@@ -217,10 +230,17 @@ public class QuizActivity extends AppCompatActivity {
                         answersBt[finalI].setBackground(getResources().getDrawable(R.drawable.answerboxwrong));
                         resqIv[curq].setBackground(getResources().getDrawable(R.drawable.answerboxwrong));
                         emptyview.setVisibility(View.VISIBLE);
+                        tap_next_label.setVisibility(View.VISIBLE);
+
+                        if (curq == 9) {
+                            tap_next_label.setText("Tap To Finish");
+                        }
                     }
                 });
             }
         }
+
+
     }
 
     @Override

@@ -157,6 +157,15 @@
 
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/tap_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:textStyle="bold"
+                android:textSize="16dp"
+                android:text="Tap To The Next Question"
+                android:gravity="center"/>
         </LinearLayout>
     </ScrollView>
 
