@@ -168,8 +168,8 @@ public class QuizActivity extends AppCompatActivity {
             // true or false
             answersBt[0].setBackground(getResources().getDrawable(R.drawable.answerbox));
             answersBt[1].setBackground(getResources().getDrawable(R.drawable.answerbox));
-            answersBt[0].setText("True");
-            answersBt[1].setText("False");
+            answersBt[0].setText("Benar");
+            answersBt[1].setText("Salah");
             answersBt[2].setVisibility(View.GONE);
             answersBt[3].setVisibility(View.GONE);
 
