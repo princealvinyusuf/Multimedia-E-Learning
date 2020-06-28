@@ -148,27 +148,27 @@ public class MotionLibraryActivity extends AppCompatActivity {
                     }
                     else if (finalI == 4 ) {
                         Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
-                        intent.putExtra(VideoActivity.EXTRA_URL, "");
+                        intent.putExtra(VideoActivity.EXTRA_URL, "https://res.cloudinary.com/polibatam/video/upload/v1593247936/Materi_4_Ikon_dan_Simbol_xvsbsg.mp4");
                         startActivity(intent);
                     }
                     else if (finalI == 5 ) {
                         Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
-                        intent.putExtra(VideoActivity.EXTRA_URL, "https://res.cloudinary.com/polibatam/video/upload/v1592195956/Materi_6_Layout_gjqeow.mp4");
+                        intent.putExtra(VideoActivity.EXTRA_URL, "https://res.cloudinary.com/polibatam/video/upload/v1593248251/Materi_5_Logo_w6nimo.mp4");
                         startActivity(intent);
                     }
                     else if (finalI == 6 ) {
                         Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
-                        intent.putExtra(VideoActivity.EXTRA_URL, "");
+                        intent.putExtra(VideoActivity.EXTRA_URL, "https://res.cloudinary.com/polibatam/video/upload/v1592195956/Materi_6_Layout_gjqeow.mp4");
                         startActivity(intent);
                     }
                     else if (finalI == 7 ) {
                         Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
-                        intent.putExtra(VideoActivity.EXTRA_URL, "");
+                        intent.putExtra(VideoActivity.EXTRA_URL, "https://res.cloudinary.com/polibatam/video/upload/v1593248541/Materi_7_Periklanan_ghvg5q.mp4");
                         startActivity(intent);
                     }
                     else if (finalI == 8 ) {
                         Intent intent = new Intent(MotionLibraryActivity.this, VideoActivity.class);
-                        intent.putExtra(VideoActivity.EXTRA_URL, "");
+                        intent.putExtra(VideoActivity.EXTRA_URL, "https://res.cloudinary.com/polibatam/video/upload/v1593248761/Materi_8_Desain_Karakter_cuqc2v.mp4");
                         startActivity(intent);
                     }
                     else if (finalI == 9 ) {

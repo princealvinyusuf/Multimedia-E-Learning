@@ -3,6 +3,7 @@ package com.polibatam.meler.view.storyboard;
 import android.annotation.SuppressLint;
 import android.app.PictureInPictureParams;
 import android.content.Context;
+import android.content.res.Configuration;
 import android.graphics.Point;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -11,6 +12,7 @@ import android.os.Bundle;
 import android.util.Rational;
 import android.view.Display;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -39,6 +41,13 @@ public class VideoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video);
         playerView = findViewById(R.id.player_view);
+
+        int orientation = getResources().getConfiguration().orientation;
+        if (orientation == Configuration.ORIENTATION_PORTRAIT) {
+            Toast.makeText(VideoActivity.this, "Please Rotate Your Device To Enjoy Full Video Experience", Toast.LENGTH_LONG).show();
+        } else {
+            // In Landdscape
+        }
     }
 
     private boolean isNetworkAvailable() {
