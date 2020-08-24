@@ -51,6 +51,12 @@
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
             android:supportsPictureInPicture="true"/>
         <service android:name=".controller.VideoDownloadService" />
+        <meta-data
+            android:name="firebase_performance_logcat_enabled"
+            android:value="true" />
+        <meta-data
+            android:name="firebase_performance_collection_enabled"
+            android:value="true" />
     </application>
 
 </manifest>
