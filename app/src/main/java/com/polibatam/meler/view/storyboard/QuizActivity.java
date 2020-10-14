@@ -24,7 +24,7 @@ import com.polibatam.meler.view.layout.FitDoughnut;
 import java.util.ArrayList;
 import java.util.List;
 
-public class QuizActivity extends AppCompatActivity {
+public class QuizActivity extends AppCompatActivity implements View.OnClickListener{
     String[] questions;
     String lessontitle;
     LessonsLDH lessonsLDH;
@@ -39,6 +39,7 @@ public class QuizActivity extends AppCompatActivity {
     private ImageView[] resqIv;
     private RelativeLayout emptyview;
 
+    private Button btn1, btn2, btn3, btn4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,8 +80,49 @@ public class QuizActivity extends AppCompatActivity {
             }
         });
 
+
+        btn1 = findViewById(R.id.answer1);
+        btn2 = findViewById(R.id.answer2);
+        btn3 = findViewById(R.id.answer3);
+        btn4 = findViewById(R.id.answer4);
+
+        btn1.setOnClickListener(this);
+        btn2.setOnClickListener(this);
+        btn3.setOnClickListener(this);
+        btn4.setOnClickListener(this);
+
         setCurrentQuestion();
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.answer1:
+                btn1.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                btn2.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                btn3.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                btn4.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                break;
+            case R.id.answer2:
+                btn2.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                btn1.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                btn3.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                btn4.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                break;
+            case R.id.answer3:
+                btn3.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                btn2.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                btn1.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                btn4.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                break;
+            case R.id.answer4:
+                btn4.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                btn2.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                btn3.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                btn1.setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+                break;
+        }
     }
 
     private void nextQuestion(){
@@ -106,11 +148,13 @@ public class QuizActivity extends AppCompatActivity {
             if(tot == 10){
                 tvCompl.setText("Perfect!");
                 tap_next_label.setVisibility(View.GONE);
+
             } else if (tot>=7){
                 tvCompl.setText("Well Done!");
                 tap_next_label.setVisibility(View.GONE);
             } else {
                 tvCompl.setText("Try Again!");
+                // Come on you can do it better TEXT
                 tvCompl.setTextColor(getResources().getColor(R.color.color_red));
                 TextView tvExtra = dialogView.findViewById(R.id.tvextra);
                 tvExtra.setVisibility(View.VISIBLE);
@@ -165,6 +209,7 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
+    // Not This
     private void setCurrentQuestion(){
         String[] parts = questions[curq].split(A_SEP);
         questiontitleTv.setText(parts[0]);
@@ -173,8 +218,8 @@ public class QuizActivity extends AppCompatActivity {
 
         if(parts.length == 2){
             // true or false
-            answersBt[0].setBackground(getResources().getDrawable(R.drawable.answerbox));
-            answersBt[1].setBackground(getResources().getDrawable(R.drawable.answerbox));
+//            answersBt[0].setBackground(getResources().getDrawable(R.drawable.answerbox));
+//            answersBt[1].setBackground(getResources().getDrawable(R.drawable.answerbox));
             answersBt[0].setText("Benar");
             answersBt[1].setText("Salah");
             answersBt[2].setVisibility(View.GONE);
@@ -199,20 +244,25 @@ public class QuizActivity extends AppCompatActivity {
 
             for(int i = 0; i<4; i++){
                 answersBt[i].setVisibility(View.VISIBLE);
-                answersBt[i].setBackground(getResources().getDrawable(R.drawable.answerbox));
+//                answersBt[i].setBackground(getResources().getDrawable(R.drawable.answerbox));
                 answersBt[i].setText(parts[list.get(i)+1]);
 
             }
         }
 
+
+        // NB: resqIV = box bawah indikator soal
         answersBt[correctans].setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                answersBt[correctans].setBackground(getResources().getDrawable(R.drawable.answerboxcorrect));
+//                answersBt[correctans].setBackground(getResources().getDrawable(R.drawable.answerboxthick));
                 results[curq] = true;
-                resqIv[curq].setBackground(getResources().getDrawable(R.drawable.answerboxcorrect));
+                resqIv[curq].setBackground(getResources().getDrawable(R.drawable.answerbox));
                 emptyview.setVisibility(View.VISIBLE);
                 tap_next_label.setVisibility(View.VISIBLE);
+
+                //sampai sini
+                btn1.setBackgroundColor(getResources().getColor(R.color.color_red));
 
                 if (curq == 9) {
                     tap_next_label.setText("Tap To Finish");
@@ -226,9 +276,9 @@ public class QuizActivity extends AppCompatActivity {
                 answersBt[i].setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        answersBt[correctans].setBackground(getResources().getDrawable(R.drawable.answerboxcorrect));
-                        answersBt[finalI].setBackground(getResources().getDrawable(R.drawable.answerboxwrong));
-                        resqIv[curq].setBackground(getResources().getDrawable(R.drawable.answerboxwrong));
+//                      answersBt[correctans].setBackground(getResources().getDrawable(R.drawable.answerboxthick));
+//                      answersBt[finalI].setBackground(getResources().getDrawable(R.drawable.answerboxwrong));
+                        resqIv[curq].setBackground(getResources().getDrawable(R.drawable.answerbox));
                         emptyview.setVisibility(View.VISIBLE);
                         tap_next_label.setVisibility(View.VISIBLE);
 
