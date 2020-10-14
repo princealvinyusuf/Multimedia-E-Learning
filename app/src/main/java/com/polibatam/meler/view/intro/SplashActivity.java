@@ -7,9 +7,8 @@ import android.os.Handler;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 
+import com.polibatam.meler.MainActivity;
 import com.polibatam.meler.R;
-import com.polibatam.meler.view.register.SignInActivity;
-import com.polibatam.meler.view.register.SignUpActivity;
 import com.polibatam.meler.databinding.ActivitySplashBinding;
 
 public class SplashActivity extends AppCompatActivity {
@@ -18,7 +17,7 @@ public class SplashActivity extends AppCompatActivity {
     private final Runnable waitCallback = new Runnable() {
         @Override
         public void run() {
-            Intent intent = new Intent(SplashActivity.this, SignInActivity.class);
+            Intent intent = new Intent(SplashActivity.this, MainActivity.class);
             startActivity(intent);
             finish();
         }

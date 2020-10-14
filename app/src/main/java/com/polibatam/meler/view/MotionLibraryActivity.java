@@ -23,8 +23,6 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.polibatam.meler.MainActivity;
 import com.polibatam.meler.R;
 import com.polibatam.meler.controller.CheckNetwork;
-import com.polibatam.meler.view.register.ProfileActivity;
-import com.polibatam.meler.view.register.SignInActivity;
 import com.polibatam.meler.view.storyboard.AchieveActivity;
 import com.polibatam.meler.view.storyboard.VideoActivity;
 
@@ -93,29 +91,29 @@ public class MotionLibraryActivity extends AppCompatActivity {
 
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
-
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.menuProfile:
-                startActivity(new Intent(this, ProfileActivity.class));
-                break;
-            case R.id.menuLogout:
-                FirebaseAuth.getInstance().signOut();
-                finish();
-                startActivity(new Intent(this, SignInActivity.class));
-                break;
-        }
-        return true;
-    }
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.menu, menu);
+//
+//        return true;
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//
+//        switch (item.getItemId()) {
+//            case R.id.menuProfile:
+//                startActivity(new Intent(this, ProfileActivity.class));
+//                break;
+//            case R.id.menuLogout:
+//                FirebaseAuth.getInstance().signOut();
+//                finish();
+//                startActivity(new Intent(this, SignInActivity.class));
+//                break;
+//        }
+//        return true;
+//    }
 
     private void setSingleEvent(GridLayout mainGrid) {
         //Loop all child item for main grid

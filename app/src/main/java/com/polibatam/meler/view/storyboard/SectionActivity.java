@@ -12,13 +12,10 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.google.firebase.auth.FirebaseAuth;
 import com.polibatam.meler.MainActivity;
 import com.polibatam.meler.R;
 import com.polibatam.meler.model.data.Section;
 import com.polibatam.meler.model.persistence.LessonsLDH;
-import com.polibatam.meler.view.register.ProfileActivity;
-import com.polibatam.meler.view.register.SignInActivity;
 
 public class SectionActivity extends AppCompatActivity {
 

@@ -3,6 +3,7 @@
     <CLASSES>
       <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/038f3752e9d2d1b10f292c972ca0badf/databinding-adapters-3.6.4/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/038f3752e9d2d1b10f292c972ca0badf/databinding-adapters-3.6.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/038f3752e9d2d1b10f292c972ca0badf/databinding-adapters-3.6.4/AndroidManifest.xml" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

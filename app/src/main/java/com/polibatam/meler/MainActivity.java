@@ -24,8 +24,6 @@ import com.polibatam.meler.model.data.Course;
 import com.polibatam.meler.model.persistence.LessonsLDH;
 import com.polibatam.meler.view.MotionLibraryActivity;
 import com.polibatam.meler.view.intro.SplashIntroActivity;
-import com.polibatam.meler.view.register.ProfileActivity;
-import com.polibatam.meler.view.register.SignInActivity;
 import com.polibatam.meler.view.storyboard.AchieveActivity;
 
 import java.util.List;
@@ -124,29 +122,29 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu, menu);
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//        MenuInflater inflater = getMenuInflater();
+//        inflater.inflate(R.menu.menu, menu);
+//
+//        return true;
+//    }
 
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-
-        switch (item.getItemId()) {
-            case R.id.menuProfile:
-                startActivity(new Intent(this, ProfileActivity.class));
-                break;
-            case R.id.menuLogout:
-                FirebaseAuth.getInstance().signOut();
-                finish();
-                startActivity(new Intent(this, SignInActivity.class));
-                break;
-        }
-        return true;
-    }
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//
+//        switch (item.getItemId()) {
+//            case R.id.menuProfile:
+//                startActivity(new Intent(this, ProfileActivity.class));
+//                break;
+//            case R.id.menuLogout:
+//                FirebaseAuth.getInstance().signOut();
+//                finish();
+//                startActivity(new Intent(this, SignInActivity.class));
+//                break;
+//        }
+//        return true;
+//    }
 
     @Override
     public void onBackPressed() {
