@@ -4,17 +4,27 @@
     <item
         android:id="@+id/navigation_explore"
         android:icon="@drawable/studentjourney"
-        android:title="Student Journey"/>
+        android:title="Teori"/>
 
     <item
         android:id="@+id/navigation_motion_library"
         android:icon="@drawable/book"
-        android:title="MoLi"/>
+        android:title="Video"/>
 
 
     <item
         android:id="@+id/navigation_profile"
         android:icon="@drawable/achievement"
-        android:title="Achievement"/>
+        android:title="Pencapaian"/>
+
+    <item
+        android:id="@+id/navigation_praktikum"
+        android:icon="@drawable/achievement"
+        android:title="Praktikum"/>
+
+    <item
+        android:id="@+id/navigation_jawaban"
+        android:icon="@drawable/achievement"
+        android:title="Jawaban"/>
 
 </menu>

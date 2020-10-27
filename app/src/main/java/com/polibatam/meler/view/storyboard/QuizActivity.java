@@ -153,7 +153,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 tvCompl.setText("Well Done!");
                 tap_next_label.setVisibility(View.GONE);
             } else {
-                tvCompl.setText("Try Again!");
+                tvCompl.setText(R.string.semangat);
                 // Come on you can do it better TEXT
                 tvCompl.setTextColor(getResources().getColor(R.color.color_red));
                 TextView tvExtra = dialogView.findViewById(R.id.tvextra);
@@ -161,7 +161,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 tap_next_label.setVisibility(View.GONE);
             }
 
-            String res = "Score:\n" + Integer.toString(tot) + "/10";
+            String res = "Skor:\n" + Integer.toString(tot) + "/10";
             tvResult.setText(res);
 
             String change = "+" + Integer.toString(ch) + "\n" + Preferences.SCORE_NAME;

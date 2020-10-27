@@ -5,22 +5,29 @@
     <string name="versionApps">v.1.0 by ~Pay</string>
     <string name="multimedia_e_learning">Multimedia E-Learning</string>
     <string name="slogan">For Your Goals Beyond Horizon</string>
-    <string name="nim">NIM</string>
-    <string name="password">Password</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="already_account">Already have an account? Login</string>
-    <string name="login">Login</string>
-    <string name="dont_have">Don\'t have account? Sign Up</string>
-    <string name="change_photo_profile">Tap on The Image to Choose Profile Picture</string>
-    <string name="enter_display_name">Enter Your Display Name</string>
-    <string name="verified">Verified</string>
-    <string name="save">Save</string>
-    <string name="student_email">Student Email</string>
-    <string name="logout">Logout</string>
-    <string name="profile">Profile</string>
 
     <string name="download_channel_name">Download</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pemula">Pemula</string>
+    <string name="teori">Teori</string>
+    <string name="video">Video</string>
+    <string name="semangat">Tetap Semangat!</string>
+
+    <string name="pencapaian">Pencapaian</string>
+    <string name="_55_100">55/100</string>
+    <string name="_75">75%</string>
+    <string name="judul_layout">Judul Layout</string>
+    <string name="tutup">Tutup</string>
+    <string name="kerja_bagus">Kerja Bagus</string>
+    <string name="ayo_kamu_dapat_lakukan_yang_terbaik">Ayo Kamu Dapat Lakukan Yang Terbaik!</string>
+    <string name="skor_7_10">Skor: 7/10</string>
+    <string name="_5_nkekuatan_super">+5\nKekuatan Super</string>
+    <string name="beranda">Beranda</string>
+    <string name="coba_lagi">COBA LAGI</string>
+    <string name="pencapaian_saat_ini">Pencapaian Saat Ini</string>
+    <string name="temukan_video_pembelajaran">Temukan Video Pembelajaran</string>
+    <string name="nointernet">No Internet Connection</string>
+
 </resources>

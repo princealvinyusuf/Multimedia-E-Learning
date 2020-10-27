@@ -15,7 +15,7 @@
         android:fontFamily="sans-serif"
         android:longClickable="false"
         android:maxLines="1"
-        android:text="Prova"
+        android:text="@string/judul_layout"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
         android:textColor="@android:color/black"
         android:textSize="20sp"

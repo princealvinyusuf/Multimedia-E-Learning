@@ -71,7 +71,7 @@ public class MotionLibraryActivity extends AppCompatActivity {
                 ActionBar.LayoutParams.MATCH_PARENT,
                 Gravity.CENTER);
         TextView textviewTitle = (TextView) viewActionBar.findViewById(R.id.actionbar_textview);
-        textviewTitle.setText("Motion Library");
+        textviewTitle.setText(R.string.video);
         abar.setCustomView(viewActionBar, params);
         abar.setDisplayShowCustomEnabled(true);
         abar.setDisplayShowTitleEnabled(false);
@@ -86,34 +86,10 @@ public class MotionLibraryActivity extends AppCompatActivity {
         }
         else
         {
-            Toast.makeText(MotionLibraryActivity.this, "No Internet Connection", Toast.LENGTH_LONG).show();
+            Toast.makeText(MotionLibraryActivity.this, R.string.nointernet, Toast.LENGTH_LONG).show();
         }
 
     }
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.menu, menu);
-//
-//        return true;
-//    }
-//
-//    @Override
-//    public boolean onOptionsItemSelected(MenuItem item) {
-//
-//        switch (item.getItemId()) {
-//            case R.id.menuProfile:
-//                startActivity(new Intent(this, ProfileActivity.class));
-//                break;
-//            case R.id.menuLogout:
-//                FirebaseAuth.getInstance().signOut();
-//                finish();
-//                startActivity(new Intent(this, SignInActivity.class));
-//                break;
-//        }
-//        return true;
-//    }
 
     private void setSingleEvent(GridLayout mainGrid) {
         //Loop all child item for main grid
