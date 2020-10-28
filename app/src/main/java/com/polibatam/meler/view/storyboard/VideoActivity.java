@@ -44,7 +44,7 @@ public class VideoActivity extends AppCompatActivity {
 
         int orientation = getResources().getConfiguration().orientation;
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
-            Toast.makeText(VideoActivity.this, "Please Rotate Your Device To Enjoy Full Video Experience", Toast.LENGTH_LONG).show();
+            Toast.makeText(VideoActivity.this, R.string.pleaserotate, Toast.LENGTH_LONG).show();
         } else {
             // In Landdscape
         }

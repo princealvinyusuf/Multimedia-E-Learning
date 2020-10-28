@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Meler</string>
-    <string name="logo">logo</string>
+    <string name="logo">Logo</string>
     <string name="meler">MELER</string>
     <string name="versionApps">v.1.0 by ~Pay</string>
     <string name="multimedia_e_learning">Multimedia E-Learning</string>
@@ -13,10 +13,11 @@
     <string name="teori">Teori</string>
     <string name="video">Video</string>
     <string name="semangat">Tetap Semangat!</string>
-
     <string name="pencapaian">Pencapaian</string>
     <string name="praktikum">Praktikum</string>
     <string name="jawaban">Jawaban</string>
+    <string name="password">Password Materi</string>
+    <string name="masukkanpassword">Masukkan Password Untuk Mengakses Jawaban</string>
     <string name="_55_100">55/100</string>
     <string name="_75">75%</string>
     <string name="judul_layout">Judul Layout</string>
@@ -98,8 +99,22 @@
         <item>Ayo Bermain 10</item>
     </array>
 
-    <string name="title">Title</string>
-    <string name="mata_kuliah">Mata Kuliah</string>
+    <string name="title">Judul</string>
+    <string name="subtitle">Sub Judul</string>
+    <string name="perancangangrafika">Perancangan Grafika</string>
+    <string name="pleaserotate">Silakan Putar Perangkat Anda Untuk Menikmati Video Penuh Pengalaman</string>
+    <string name="selanjutnya">Tekan Layar Untuk Menuju Soal Selanjutnya</string>
+    <string name="pendahuluan">Pendahuluan</string>
+    <string name="nirmana">Nirmana</string>
+    <string name="warna">Warna</string>
+    <string name="tipografi">Tipografi</string>
+    <string name="simbol_amp_icon"><![CDATA[Simbol & Icon]]></string>
+    <string name="tata_letak">Tata Letak</string>
+    <string name="periklanan">Periklanan</string>
+    <string name="desain_karakter">Desain Karakter</string>
+    <string name="ilustrasi">Ilustrasi</string>
+    <string name="loremipsum">A virus is a small infectious agent that replicates only inside the living cells of other organisms. Viruses can infect all types of life forms, from animals and plants to microorganisms, including bacteria and archaea.[1] The study of viruses is known as virology, a sub-speciality of microbiology.</string>
+
 
     <string-array name="data_title2">
         <item>Teori 1</item>

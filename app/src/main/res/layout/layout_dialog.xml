@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="3dp"
-        android:text="Masukkan Password Untuk Mengakses Jawaban"
+        android:text="@string/masukkanpassword"
         android:layout_marginBottom="16dp"
         android:textSize="14sp"
         android:textStyle="bold"/>
@@ -19,5 +19,5 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvDescription"
         android:singleLine="true"
-        android:hint="Password Materi" />
+        android:hint="@string/password" />
 </RelativeLayout>

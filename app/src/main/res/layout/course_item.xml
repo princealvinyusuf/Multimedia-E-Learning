@@ -14,7 +14,7 @@
         android:layout_marginLeft="25dp"
         android:layout_marginTop="10dp"
         android:fontFamily="sans-serif"
-        android:text="Perancangan Grafika"
+        android:text="@string/perancangangrafika"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
         android:textSize="18sp"
         android:textStyle="bold"

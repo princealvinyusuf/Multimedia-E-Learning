@@ -19,7 +19,7 @@
         android:fontFamily="sans-serif"
         android:paddingLeft="5dp"
         android:paddingRight="5dp"
-        android:text="Design Principles"
+        android:text="@string/title"
         android:textAppearance="@style/TextAppearance.AppCompat.Caption"
         android:textColor="@color/colorBlue3"
         android:textSize="16sp"
@@ -67,7 +67,7 @@
                 android:layout_marginRight="30dp"
                 android:layout_marginTop="40dp"
                 android:fontFamily="sans-serif"
-                android:text="Dot"
+                android:text="@string/title"
                 android:textAlignment="center"
                 android:textAppearance="@style/TextAppearance.AppCompat.Headline"
                 android:textSize="30sp"/>
@@ -97,7 +97,7 @@
                 android:layout_marginRight="30dp"
                 android:fontFamily="sans-serif"
                 android:lineSpacingExtra="4sp"
-                android:text="A virus is a small infectious agent that replicates only inside the living cells of other organisms. Viruses can infect all types of life forms, from animals and plants to microorganisms, including bacteria and archaea.[1]  Since Dmitri Ivanovsky's 1892 article describing a non-bacterial pathogen infecting tobacco plants, and the discovery of the tobacco mosaic virus by Martinus Beijerinck in 1898,[2] about 5,000 virus species have been described in detail,[3] although there are millions of types.[4] Viruses are found in almost every ecosystem on Earth and are the most numerous type of biological entity.[5][6] The study of viruses is known as virology, a sub-speciality of microbiology."
+                android:text="@string/loremipsum"
                 android:textAppearance="@style/TextAppearance.AppCompat.Light.SearchResult.Subtitle"/>
 
         </LinearLayout>

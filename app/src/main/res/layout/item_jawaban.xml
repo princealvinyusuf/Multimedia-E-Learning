@@ -30,6 +30,6 @@
         android:layout_below="@id/txtTitle"
         android:ellipsize="end"
         android:maxLines="3"
-        android:text="@string/mata_kuliah"/>
+        android:text="@string/subtitle"/>
 
 </RelativeLayout>
