@@ -1,14 +1,17 @@
 package com.polibatam.meler;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.polibatam.meler.jawaban.Jawaban;
 import com.polibatam.meler.jawaban.JawabanAdapter;
 import com.polibatam.meler.jawaban.PDFJawabanActivity;
@@ -36,6 +39,42 @@ public class JawabanActivity extends AppCompatActivity implements PasswordDialog
     private String[] dataPageName;
     private ArrayList<Jawaban> jawabans;
 
+    private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
+            = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+        @Override
+        public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+            Intent intent;
+            switch (item.getItemId()) {
+
+                case R.id.navigation_explore:
+                    intent = new Intent(JawabanActivity.this, MainActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
+                    return true;
+                case R.id.navigation_motion:
+                    intent = new Intent(JawabanActivity.this, MotionLibraryActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
+                    return true;
+                case R.id.navigation_achievement:
+                    intent = new Intent(JawabanActivity.this, AchieveActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
+                    return true;
+                case R.id.navigation_praktikum:
+                    intent = new Intent(JawabanActivity.this, PraktikumActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
+                    return true;
+                case R.id.navigation_jawaban:
+                    return true;
+
+            }
+            return false;
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,6 +86,12 @@ public class JawabanActivity extends AppCompatActivity implements PasswordDialog
 
         prepare();
         addItem();
+
+        setTitle(R.string.jawaban);
+
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
+        navigation.setSelectedItemId(R.id.navigation_jawaban);
 
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override

@@ -37,13 +37,24 @@ public class MotionLibraryActivity extends AppCompatActivity {
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     return true;
-                case R.id.navigation_profile:
+                case R.id.navigation_motion:
+                    return true;
+                case R.id.navigation_achievement:
                     intent = new Intent(MotionLibraryActivity.this, AchieveActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     return true;
-                case R.id.navigation_motion_library:
+                case R.id.navigation_praktikum:
+                    intent = new Intent(MotionLibraryActivity.this, PraktikumActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
                     return true;
+                case R.id.navigation_jawaban:
+                    intent = new Intent(MotionLibraryActivity.this, JawabanActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
+                    return true;
+
             }
             return false;
         }
@@ -56,19 +67,9 @@ public class MotionLibraryActivity extends AppCompatActivity {
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        navigation.setSelectedItemId(R.id.navigation_motion_library);
+        navigation.setSelectedItemId(R.id.navigation_motion);
 
-        final ActionBar abar = getSupportActionBar();
-        View viewActionBar = getLayoutInflater().inflate(R.layout.actionbar_titletext_layout, null);
-        ActionBar.LayoutParams params = new ActionBar.LayoutParams(
-                ActionBar.LayoutParams.WRAP_CONTENT,
-                ActionBar.LayoutParams.MATCH_PARENT,
-                Gravity.CENTER);
-        TextView textviewTitle = (TextView) viewActionBar.findViewById(R.id.actionbar_textview);
-        textviewTitle.setText(R.string.video);
-        abar.setCustomView(viewActionBar, params);
-        abar.setDisplayShowCustomEnabled(true);
-        abar.setDisplayShowTitleEnabled(false);
+        setTitle(R.string.video);
 
         mainGrid = (GridLayout) findViewById(R.id.mainGrid);
 

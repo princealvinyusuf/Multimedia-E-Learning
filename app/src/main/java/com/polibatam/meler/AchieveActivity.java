@@ -39,12 +39,22 @@ public class AchieveActivity extends AppCompatActivity {
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     return true;
-                case R.id.navigation_motion_library:
+                case R.id.navigation_motion:
                     intent = new Intent(AchieveActivity.this, MotionLibraryActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     return true;
-                case R.id.navigation_profile:
+                case R.id.navigation_achievement:
+                    return true;
+                case R.id.navigation_praktikum:
+                    intent = new Intent(AchieveActivity.this, PraktikumActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
+                    return true;
+                case R.id.navigation_jawaban:
+                    intent = new Intent(AchieveActivity.this, JawabanActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
                     return true;
             }
             return false;
@@ -56,21 +66,11 @@ public class AchieveActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_achieve);
 
-        final ActionBar abar = getSupportActionBar();
-        View viewActionBar = getLayoutInflater().inflate(R.layout.actionbar_titletext_layout, null);
-        ActionBar.LayoutParams params = new ActionBar.LayoutParams(
-                ActionBar.LayoutParams.WRAP_CONTENT,
-                ActionBar.LayoutParams.MATCH_PARENT,
-                Gravity.CENTER);
-        TextView textviewTitle = (TextView) viewActionBar.findViewById(R.id.actionbar_textview);
-        textviewTitle.setText(R.string.pencapaian);
-        abar.setCustomView(viewActionBar, params);
-        abar.setDisplayShowCustomEnabled(true);
-        abar.setDisplayShowTitleEnabled(false);
+        setTitle(R.string.pencapaian);
 
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
-        navigation.setSelectedItemId(R.id.navigation_profile);
+        navigation.setSelectedItemId(R.id.navigation_achievement);
 
         LessonsLDH lessonsLDH = LessonsLDH.getInstance(this);
         Level level = lessonsLDH.getLevel();

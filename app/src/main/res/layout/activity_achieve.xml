@@ -116,8 +116,8 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        app:itemIconTint="@drawable/tab_color"
-        app:itemTextColor="@drawable/tab_color"
+        app:itemIconTint="@drawable/click_tab_color"
+        app:itemTextColor="@drawable/click_tab_color"
         app:menu="@menu/tabbar"/>
 
 

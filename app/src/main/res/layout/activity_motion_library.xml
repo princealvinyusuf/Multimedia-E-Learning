@@ -445,8 +445,8 @@
         android:layout_marginEnd="0dp"
         android:background="@android:color/white"
         android:hapticFeedbackEnabled="true"
-        app:itemIconTint="@drawable/tab_color"
-        app:itemTextColor="@drawable/tab_color"
+        app:itemIconTint="@drawable/click_tab_color"
+        app:itemTextColor="@drawable/click_tab_color"
         app:menu="@menu/tabbar" />
 
 </RelativeLayout>

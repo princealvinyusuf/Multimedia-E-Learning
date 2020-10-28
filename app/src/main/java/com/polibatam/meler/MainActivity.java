@@ -45,13 +45,13 @@ public class MainActivity extends AppCompatActivity {
 
                 case R.id.navigation_explore:
                     return true;
-                case R.id.navigation_profile:
-                    intent = new Intent(MainActivity.this, AchieveActivity.class);
+                case R.id.navigation_motion:
+                    intent = new Intent(MainActivity.this, MotionLibraryActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     return true;
-                case R.id.navigation_motion_library:
-                    intent = new Intent(MainActivity.this, MotionLibraryActivity.class);
+                case R.id.navigation_achievement:
+                    intent = new Intent(MainActivity.this, AchieveActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     return true;
@@ -95,17 +95,7 @@ public class MainActivity extends AppCompatActivity {
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
 
-        final ActionBar abar = getSupportActionBar();
-        View viewActionBar = getLayoutInflater().inflate(R.layout.actionbar_titletext_layout, null);
-        ActionBar.LayoutParams params = new ActionBar.LayoutParams(
-                ActionBar.LayoutParams.WRAP_CONTENT,
-                ActionBar.LayoutParams.MATCH_PARENT,
-                Gravity.CENTER);
-        TextView textviewTitle = (TextView) viewActionBar.findViewById(R.id.actionbar_textview);
-        textviewTitle.setText(R.string.teori);
-        abar.setCustomView(viewActionBar, params);
-        abar.setDisplayShowCustomEnabled(true);
-        abar.setDisplayShowTitleEnabled(false);
+        setTitle(R.string.teori);
 
     }
 
