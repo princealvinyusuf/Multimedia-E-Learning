@@ -8,7 +8,6 @@
 
     <string name="download_channel_name">Download</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="pemula">Pemula</string>
     <string name="teori">Teori</string>
@@ -71,6 +70,61 @@
         <item>@drawable/x10</item>
     </array>
 
+    <array name="data_pdf2">
+        <item>"sample.pdf"</item>
+        <item>"sample 2.pdf"</item>
+        <item>"sample 3.pdf"</item>
+        <item>"sample 4.pdf"</item>
+        <item>"sample 5.pdf"</item>
+        <item>"sample 6.pdf"</item>
+        <item>"sample 7.pdf"</item>
+        <item>"sample 8.pdf"</item>
+        <item>"sample 9.pdf"</item>
+        <item>"sample 10.pdf"</item>
+    </array>
+
+    <array name="data_pageName2">
+        <item>Pengenalan Adobe Illustrator</item>
+        <item>Ayo Bernirmana</item>
+        <item>Ciptakan Tipografimu</item>
+        <item>Ayo Desain Logomu</item>
+        <item>Ayo Buat Logomu</item>
+        <item>Ayo Bermain 6</item>
+        <item>Ayo Bermain 7</item>
+        <item>Ayo Bermain 8</item>
+        <item>Ayo Bermain 9</item>
+        <item>Ayo Bermain 10</item>
+    </array>
+
+    <string name="title">Title</string>
+    <string name="mata_kuliah">Mata Kuliah</string>
+
+    <string-array name="data_title2">
+        <item>Teori 1</item>
+        <item>Teori 2</item>
+        <item>Teori 3</item>
+        <item>Teori 4</item>
+        <item>Teori 5</item>
+        <item>Teori 6</item>
+        <item>Teori 7</item>
+        <item>Teori 8</item>
+        <item>Teori 9</item>
+        <item>Teori 10</item>
+    </string-array>
+
+    <string-array name="data_description">
+        <item>Pembahasan Soal Pendahuluan</item>
+        <item>Pembahasan Soal Nirmana</item>
+        <item>Pembahasan Soal Warna</item>
+        <item>Pembahasan Soal Tipografi</item>
+        <item>Pembahasan Soal Simbol dan Ikon</item>
+        <item>Pembahasan Soal Logo</item>
+        <item>Pembahasan Soal Tata Letak</item>
+        <item>Pembahasan Soal Periklanan</item>
+        <item>Pembahasan Soal Desain Karakter</item>
+        <item>Pembahasan Soal Illustrasi</item>
+    </string-array>
+
     <array name="data_pdf">
         <item>"sample.pdf"</item>
         <item>"sample 2.pdf"</item>
@@ -85,16 +139,17 @@
     </array>
 
     <array name="data_pageName">
-        <item>Pengenalan Adobe Illustrator</item>
+        <item>Ayo Pendahuluan</item>
         <item>Ayo Bernirmana</item>
-        <item>Ciptakan Tipografimu</item>
-        <item>Ayo Desain Logomu</item>
-        <item>Ayo Buat Logomu</item>
+        <item>Ayo Mewarna</item>
+        <item>Ayo Bermain 4</item>
+        <item>Ayo Bermain 5</item>
         <item>Ayo Bermain 6</item>
         <item>Ayo Bermain 7</item>
         <item>Ayo Bermain 8</item>
         <item>Ayo Bermain 9</item>
         <item>Ayo Bermain 10</item>
     </array>
+
 
 </resources>

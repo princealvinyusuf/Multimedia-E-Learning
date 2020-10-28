@@ -10,7 +10,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.polibatam.meler.praktikum.PDFActivity;
+import com.polibatam.meler.praktikum.PDFPraktikumActivity;
 import com.polibatam.meler.praktikum.Praktikum;
 import com.polibatam.meler.praktikum.PraktikumAdapter;
 
@@ -47,8 +47,8 @@ public class PraktikumActivity extends AppCompatActivity {
                 praktikum.setPdfName(praktikums.get(position).getPdfName());
                 praktikum.setPageName(praktikums.get(position).getPageName());
 
-                Intent intent = new Intent(PraktikumActivity.this, PDFActivity.class);
-                intent.putExtra(PDFActivity.SAMPLE_FILE, praktikum);
+                Intent intent = new Intent(PraktikumActivity.this, PDFPraktikumActivity.class);
+                intent.putExtra(PDFPraktikumActivity.SAMPLE_FILE, praktikum);
                 startActivity(intent);
             }
         });

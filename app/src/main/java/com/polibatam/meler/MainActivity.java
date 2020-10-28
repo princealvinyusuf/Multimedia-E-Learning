@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                     return true;
                 case R.id.navigation_jawaban:
-                    intent = new Intent(MainActivity.this, MotionLibraryActivity.class);
+                    intent = new Intent(MainActivity.this, JawabanActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
                     return true;

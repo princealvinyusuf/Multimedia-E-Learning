@@ -23,7 +23,9 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".praktikum.PDFActivity"></activity>
+        <activity android:name=".jawaban.PDFJawabanActivity"></activity>
+        <activity android:name=".JawabanActivity" />
+        <activity android:name=".praktikum.PDFPraktikumActivity" />
         <activity android:name=".PraktikumActivity" />
         <activity android:name=".MotionLibraryActivity" />
         <activity android:name=".AchieveActivity" />
