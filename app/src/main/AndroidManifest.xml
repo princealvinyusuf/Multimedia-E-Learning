@@ -23,8 +23,10 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.MotionLibraryActivity" />
-        <activity android:name=".view.storyboard.AchieveActivity" />
+        <activity android:name=".praktikum.PDFActivity"></activity>
+        <activity android:name=".PraktikumActivity" />
+        <activity android:name=".MotionLibraryActivity" />
+        <activity android:name=".AchieveActivity" />
         <activity android:name=".view.storyboard.QuizActivity" />
         <activity android:name=".view.storyboard.SectionActivity" />
         <activity android:name=".MainActivity" />
@@ -40,10 +42,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".view.storyboard.VideoActivity"
+        <activity
+            android:name=".view.storyboard.VideoActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
-            android:supportsPictureInPicture="true"/>
+            android:supportsPictureInPicture="true" />
+
         <service android:name=".controller.VideoDownloadService" />
+
         <meta-data
             android:name="firebase_performance_logcat_enabled"
             android:value="true" />

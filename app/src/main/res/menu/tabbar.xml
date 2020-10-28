@@ -19,12 +19,12 @@
 
     <item
         android:id="@+id/navigation_praktikum"
-        android:icon="@drawable/achievement"
+        android:icon="@drawable/praktikum"
         android:title="Praktikum"/>
 
     <item
         android:id="@+id/navigation_jawaban"
-        android:icon="@drawable/achievement"
+        android:icon="@drawable/key"
         android:title="Jawaban"/>
 
 </menu>

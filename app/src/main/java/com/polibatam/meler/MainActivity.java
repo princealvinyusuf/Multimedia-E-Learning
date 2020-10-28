@@ -10,21 +10,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.view.Gravity;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-import com.google.firebase.auth.FirebaseAuth;
 import com.polibatam.meler.model.CoursesListAdapter;
 import com.polibatam.meler.model.data.Course;
 import com.polibatam.meler.model.persistence.LessonsLDH;
-import com.polibatam.meler.view.MotionLibraryActivity;
 import com.polibatam.meler.view.intro.SplashIntroActivity;
-import com.polibatam.meler.view.storyboard.AchieveActivity;
 
 import java.util.List;
 
@@ -56,6 +51,16 @@ public class MainActivity extends AppCompatActivity {
                     startActivity(intent);
                     return true;
                 case R.id.navigation_motion_library:
+                    intent = new Intent(MainActivity.this, MotionLibraryActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
+                    return true;
+                case R.id.navigation_praktikum:
+                    intent = new Intent(MainActivity.this, PraktikumActivity.class);
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                    startActivity(intent);
+                    return true;
+                case R.id.navigation_jawaban:
                     intent = new Intent(MainActivity.this, MotionLibraryActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                     startActivity(intent);
@@ -150,9 +155,9 @@ public class MainActivity extends AppCompatActivity {
     public void onBackPressed() {
         new AlertDialog.Builder(this)
                 .setIcon(android.R.drawable.ic_dialog_alert)
-                .setTitle("Closing Meler")
+                .setTitle(R.string.tutupaplikasi)
                 .setMessage("Are you sure you want to leave the courses?")
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener()
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener()
                 {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -161,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                 })
-                .setNegativeButton("No", null)
+                .setNegativeButton("Tidak", null)
                 .show();
     }
 

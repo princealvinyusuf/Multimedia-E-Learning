@@ -20,6 +20,8 @@
     <string name="_75">75%</string>
     <string name="judul_layout">Judul Layout</string>
     <string name="tutup">Tutup</string>
+    <string name="tutupaplikasi">Tutup Meler?</string>
+    <string name="tinggalkanaplikasi">Apa kamu yakin ingin meninggalkan pelajaran?</string>
     <string name="kerja_bagus">Kerja Bagus</string>
     <string name="ayo_kamu_dapat_lakukan_yang_terbaik">Ayo Kamu Dapat Lakukan Yang Terbaik!</string>
     <string name="skor_7_10">Skor: 7/10</string>
@@ -29,5 +31,70 @@
     <string name="pencapaian_saat_ini">Pencapaian Saat Ini</string>
     <string name="temukan_video_pembelajaran">Temukan Video Pembelajaran</string>
     <string name="nointernet">No Internet Connection</string>
+
+    <string-array name="data_title">
+        <item>Praktikum 1</item>
+        <item>Praktikum 2</item>
+        <item>Praktikum 3</item>
+        <item>Praktikum 4</item>
+        <item>Praktikum 5</item>
+        <item>Praktikum 6</item>
+        <item>Praktikum 7</item>
+        <item>Praktikum 8</item>
+        <item>Praktikum 9</item>
+        <item>Praktikum 10</item>
+    </string-array>
+
+    <string-array name="data_subtitle">
+        <item>Pendahuluan</item>
+        <item>Nirmana dan Warna</item>
+        <item>Tipografi</item>
+        <item>Simbol dan Ikon</item>
+        <item>Logo</item>
+        <item>Logo</item>
+        <item>Tata Letak</item>
+        <item>Periklanan</item>
+        <item>Desain Karakter</item>
+        <item>Illustrasi</item>
+    </string-array>
+
+    <array name="data_image">
+        <item>@drawable/x1</item>
+        <item>@drawable/x2</item>
+        <item>@drawable/x3</item>
+        <item>@drawable/x4</item>
+        <item>@drawable/x5</item>
+        <item>@drawable/x6</item>
+        <item>@drawable/x7</item>
+        <item>@drawable/x8</item>
+        <item>@drawable/x9</item>
+        <item>@drawable/x10</item>
+    </array>
+
+    <array name="data_pdf">
+        <item>"sample.pdf"</item>
+        <item>"sample 2.pdf"</item>
+        <item>"sample 3.pdf"</item>
+        <item>"sample 4.pdf"</item>
+        <item>"sample 5.pdf"</item>
+        <item>"sample 6.pdf"</item>
+        <item>"sample 7.pdf"</item>
+        <item>"sample 8.pdf"</item>
+        <item>"sample 9.pdf"</item>
+        <item>"sample 10.pdf"</item>
+    </array>
+
+    <array name="data_pageName">
+        <item>Pengenalan Adobe Illustrator</item>
+        <item>Ayo Bernirmana</item>
+        <item>Ciptakan Tipografimu</item>
+        <item>Ayo Desain Logomu</item>
+        <item>Ayo Buat Logomu</item>
+        <item>Ayo Bermain 6</item>
+        <item>Ayo Bermain 7</item>
+        <item>Ayo Bermain 8</item>
+        <item>Ayo Bermain 9</item>
+        <item>Ayo Bermain 10</item>
+    </array>
 
 </resources>
