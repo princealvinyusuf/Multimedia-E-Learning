@@ -308,7 +308,7 @@ Jarak antar huruf dalam sebuah kata, kalimat, atau paragraf
 Pemerataan Kolom pada suatu Tulisan
 
 ','Suatu ilmu dalam memilih, menata, dan menciptakan huruf, dengan mengatur penyebarannya pada ruang yang tersedia untuk menciptakan kesan-kesan tertentu <-> Tipografi <-> Nirmana <-> Desain Grafis<-> Warna <<-->> Menurut Anatominya huruf dibedakan menjadi 2 yaitu Serif dan Sans Serif<->F<<-->>Johannes Gutenberg berhasil membuat huruf cetak timah yang dapat digerakkan pada tahun  <-> 1455 <-> 1555 <-> 1655<-> 1454 <<-->> Memiliki garis-garis kecil pada ujung hamper semua letter dan posisi garis-garis berdiri horizontal terhadap badan baru, adalah ciri-ciri dari font Serif<->T<<-->>Huruf Sans Serif muncul di akhir abad ke - 18 dari karya-karya seniman modernis <->F<<-->> Ketebalan huruf tidak sama, ada bagian yang tebal, sedangkan bagian yang lainnya lebih tipis  <-> Roman <-> Gothic <-> Text <-> Block <<-->> Ketebalan garis tebal dan mencolok, Biasanya digunakan sebagai Headline dan Display,Terdapat sisi unik dan sifat artistik pada bentuk hurufnya <-> Block <-> Script <-> Gothic <-> Roman <<-->>Terinspirasi dari corak tulisan tangan <-> Script <-> Italic <-> Block <-> Roman<<-->>Jarak antar huruf dalam sebuah kata, kalimat, atau paragraf<-> Kerning <-> Tracking <-> Leading <-> Alignment<<-->>Menentukan seberapa besar jarak antar baris<-> Leading <-> Kerning <-> Tracking <-> Alignment',0,10);
-INSERT INTO "lesson" VALUES (5,2,'Simbol dan Icon','Ikon<<-->>
+INSERT INTO "lesson" VALUES (5,2,'Simbol dan Ikon','Ikon<<-->>
 
 Merupakan sebuah tanda yang dibuat dengan kesamaan pada referensinya atau acuannya
 
@@ -410,7 +410,7 @@ Terdiri dari bentuk tulisan
 Merupakan pedoman bagi perusahaan dalam menerapkan konsistensi identitas
 
 ','Huruf atau lambang yang mengandung makna, terdiri atas satu kata atau lebih sebagai lambang atau nama perusahaan dan sebagainya <-> Logo <-> Simbol <-> Ikon <-> Tipografi <<-->> Logo berasal dari kata Logos dalam bahasa yunani yang artinya pikiran<->T<<-->>Yang bukan fungsi dari Logo <-> Mempermudah Pembajakan <-> Identitas Diri <-> Tanda Kepemilikan<-> Tanda Jaminan Kualitas <<-->> Terdiri dari bentuk gambar merupakan Logogram <->T<<-->> Serbaguna, bisa digunakan diberbagai media, adalah pengertian Versatile <->T<<-->> Tidak lekang oleh waktu, adalah pengertian Memorable <->F<<-->> Yang bukan prinsip logo <-> Balance <-> Timeless <-> Versatile <-> Memorable <<-->> Berikut merupakan tahapan pembuatan logo, kecuali <-> Material Collecting <-> Briefing <-> Research <-> Feedback & Review <<-->>Merupakan pedoman bagi perusahaan dalam menerapkan konsistensi identitas <-> Corporate Identity <-> Corporate Value <-> Corporate Principal <-> Corporate Goals<<-->>Tahapan Pembuatan Logo setelah tahap riset selesai dilakukan adalah <-> Membuat Konsep <-> Feedback & Review <-> Presentasi <-> Briefing',0,10);
-INSERT INTO "lesson" VALUES (7,3,'Layout','Apa Itu Layout<<-->>
+INSERT INTO "lesson" VALUES (7,3,'Tata Letak','Apa Itu Layout ?<<-->>
 
 ~>Layout = Tata Letak
 
@@ -519,7 +519,7 @@ Bersifat optic
 
 
 ',NULL,NULL,'Tata letak elemen-elemen desain dalam media untuk menyampaikan informasi atau pesan <-> Layout <-> Logo <-> Nirmana <-> Tipografi <<-->> Satu A3 digabung dengan dua A5 dan satu A4, menjadi? <-> A2 <-> A3 <-> A4 <-> A1 <<-->> Tiga A5 digabung dengan dua A7 dan satu A6, menjadi? <-> A3 <-> A2 <-> A1 <-> A4 <<-->> Dua A3 digabung dengan  tiga A6, dua A4, dua A5 dan dua A7, menjadi? <-> A1 <-> A2 <-> A3 <-> A4 <<-->> Dua A4 menjadi?  <-> A3 <-> A2 <-> A1 <-> A4 <<-->> Memudahkan pembaca mengurutkan pandangan matanya pada layout <-> Sequence <-> Emphasis <-> Balance <-> Unity <<-->>Menciptakan kontras bisa melalui ukuran, posisi, warna dan bentuk <-> Emphasis <-> Sequence <-> Balance <-> Unity <<-->> Bisa dibuktikan secara sistematis <-> Balance Simetris <-> Balance Asimetris <-> Sequence <-> Unity <<-->>Balance yang bersifat optic <-> Balance Asimetris <-> Balance Simetris <-> Sequence <-> Unity <<-->>Kesatuan antara elemen fisik dan non fisik<->Unity <-> Emphasis <-> Balance <-> Sequence',0,8);
-INSERT INTO "lesson" VALUES (8,3,'Advertising','Periklanan<<-->>
+INSERT INTO "lesson" VALUES (8,3,'Periklanan','Periklanan<<-->>
 
 Iklan adalah pesan yang menawarkan suatu produk atau jasa yang ditunjukkan kepada masyarakat lewat suatu media
 
@@ -684,8 +684,8 @@ Teknik pembuatan ilustrasi: menggambar, sketsa, melukis, dan memotret.
 ','Triangle Perspective<<-->>
 
 ','Penggambaran visual tentang sebuah kegiatan atau peristiwa yang disaksikan secara langsung maupun hasil dari imajinasi <-> Ilustrasi <-> Nirmana <-> Desain Grafis <-> Simbol <<-->> Teknik pembuatan ilustrasi, kecuali <-> Membaca <-> Menggambar <-> Sketsa <-> Memotret <<-->> Gambar prespektif yang terjadi saat sebuah objek dilihat dengan garis pusat pandangan tegak lurus terhadap salah satu permukaannya<-> One Point Perspective <-> Two Points Perspective <-> Triangle Perspective <-> Quadran Perspective <<-->> Penggambaran pada sebuah objek yang terlihat pada sebuah dua titik sudut pandang mata atau yang terlihat dari sebelah kanan dan kiri sudut garis penglihatan <-> Two Points Perspective <-> One Point Perspective <-> Quadran Perspective <-> Triangle Perspective <<-->> Biasanya hanya dipakai untuk menggambarkan sesuatu yang sangat luas, besar, dan tinggi dan secara visual mengalami distorsi yang sangat ekstrem <-> Triangle Perspective <-> Two Points Perspective <-> One Point Perspective <-> Quadran Perspective <<-->> Yang merupakan salah satu unsur gambar ilustrasi <-> Manusia <-> Alam <-> Batu <-> Bebas <<-->>Salah satu fungsi gambar ilustrasi <-> Menjelaskan suatu peristiwa <-> Hanya tambahan <-> Menambah kesan suatu gambar <-> Salah Semua <<-->> Kata Ilustrasi berasal dari bahasa Inggris yaitu Illustration yang artinya? <-> Foto <-> Tambahan <-> Latar <-> Hiasan <<-->>Untuk dapat menggambar tokoh manusia yang baik kita perlu mengetahui dan menguasai proporsi dan anatomi tubuh manusia<->T<<-->> Realis artinya gambar dibuat sesuai dengan keadaan yang sebernarnya, baik proporsi maupun anatomi dibuat sama menyerupai dengan objek yang di gambar<->T',0,10);
-INSERT INTO "course" VALUES (1,'Part 1 - 3 😄');
-INSERT INTO "course" VALUES (2,'Part 4 - 6 😍');
-INSERT INTO "course" VALUES (3,'Part 7 - 8 😋');
-INSERT INTO "course" VALUES (4,'Part 9 - 10 😦');
+INSERT INTO "course" VALUES (1,'Bagian 1 - 3 😄');
+INSERT INTO "course" VALUES (2,'Bagian 4 - 6 😍');
+INSERT INTO "course" VALUES (3,'Bagian 7 - 8 😋');
+INSERT INTO "course" VALUES (4,'Bagian 9 - 10 😦');
 COMMIT;
