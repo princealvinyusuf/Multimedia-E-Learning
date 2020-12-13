@@ -158,14 +158,25 @@
             </LinearLayout>
 
             <TextView
+                android:id="@+id/jawaban_disimpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="18dp"
+                android:gravity="center"
+                android:textColor="@android:color/black"
+                android:text="@string/jawaban_disimpan"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <TextView
                 android:id="@+id/tap_next"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="18dp"
-                android:textStyle="bold"
-                android:textSize="16dp"
+                android:gravity="center"
                 android:text="@string/selanjutnya"
-                android:gravity="center"/>
+                android:textSize="22sp"
+                android:textStyle="bold" />
         </LinearLayout>
     </ScrollView>
 

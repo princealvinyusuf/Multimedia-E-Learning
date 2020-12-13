@@ -3,6 +3,7 @@ package com.polibatam.meler.view.storyboard;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -34,7 +35,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
     public static final String A_SEP = "<->";
     boolean[] results;
 
-    private TextView lessontitleTv, questiontitleTv, tap_next_label;
+    private TextView lessontitleTv, questiontitleTv, tap_next_label, jawaban_disimpan;
     private Button[] answersBt;
     private ImageView[] resqIv;
     private RelativeLayout emptyview;
@@ -46,8 +47,12 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quiz);
 
+        // sampai sini
         tap_next_label = findViewById(R.id.tap_next);
         tap_next_label.setVisibility(View.GONE);
+
+        jawaban_disimpan = findViewById(R.id.jawaban_disimpan);
+        jawaban_disimpan.setVisibility(View.GONE);
 
         Intent intent = getIntent();
         lessonid = intent.getIntExtra("lessonid", 0);
@@ -148,10 +153,12 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
             if(tot == 10){
                 tvCompl.setText("Perfect!");
                 tap_next_label.setVisibility(View.GONE);
+                jawaban_disimpan.setVisibility(View.GONE);
 
             } else if (tot>=7){
                 tvCompl.setText("Well Done!");
                 tap_next_label.setVisibility(View.GONE);
+                jawaban_disimpan.setVisibility(View.GONE);
             } else {
                 tvCompl.setText(R.string.semangat);
                 // Come on you can do it better TEXT
@@ -159,6 +166,7 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 TextView tvExtra = dialogView.findViewById(R.id.tvextra);
                 tvExtra.setVisibility(View.VISIBLE);
                 tap_next_label.setVisibility(View.GONE);
+                jawaban_disimpan.setVisibility(View.GONE);
             }
 
             String res = "Skor:\n" + Integer.toString(tot) + "/10";
@@ -215,6 +223,11 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
         questiontitleTv.setText(parts[0]);
         final int correctans;
         tap_next_label.setVisibility(View.GONE);
+        jawaban_disimpan.setVisibility(View.GONE);
+        answersBt[0].setVisibility(View.VISIBLE);
+        answersBt[1].setVisibility(View.VISIBLE);
+        answersBt[2].setVisibility(View.VISIBLE);
+        answersBt[3].setVisibility(View.VISIBLE);
 
         if(parts.length == 2){
             // true or false
@@ -260,12 +273,20 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                 resqIv[curq].setBackground(getResources().getDrawable(R.drawable.answerbox));
                 emptyview.setVisibility(View.VISIBLE);
                 tap_next_label.setVisibility(View.VISIBLE);
+                jawaban_disimpan.setVisibility(View.VISIBLE);
+//                questiontitleTv.setText("Jawaban Disimpan");
+//                questiontitleTv.setTypeface(null, Typeface.BOLD);
+                answersBt[0].setVisibility(View.GONE);
+                answersBt[1].setVisibility(View.GONE);
+                answersBt[2].setVisibility(View.GONE);
+                answersBt[3].setVisibility(View.GONE);
 
                 //sampai sini
-                btn1.setBackgroundColor(getResources().getColor(R.color.color_red));
+//                btn1.setBackgroundColor(getResources().getColor(R.color.color_red));
 
                 if (curq == 9) {
-                    tap_next_label.setText("Tap To Finish");
+                    tap_next_label.setText("Tekan Untuk Melihat Skor");
+                    jawaban_disimpan.setVisibility(View.VISIBLE);
                 }
             }
         });
@@ -281,9 +302,17 @@ public class QuizActivity extends AppCompatActivity implements View.OnClickListe
                         resqIv[curq].setBackground(getResources().getDrawable(R.drawable.answerbox));
                         emptyview.setVisibility(View.VISIBLE);
                         tap_next_label.setVisibility(View.VISIBLE);
+                        jawaban_disimpan.setVisibility(View.VISIBLE);
+//                        questiontitleTv.setText("Jawaban Disimpan");
+//                        questiontitleTv.setTypeface(null, Typeface.BOLD);
+                        answersBt[0].setVisibility(View.GONE);
+                        answersBt[1].setVisibility(View.GONE);
+                        answersBt[2].setVisibility(View.GONE);
+                        answersBt[3].setVisibility(View.GONE);
 
                         if (curq == 9) {
-                            tap_next_label.setText("Tap To Finish");
+                            tap_next_label.setText("Tekan Untuk Melihat Skor");
+                            jawaban_disimpan.setVisibility(View.VISIBLE);
                         }
                     }
                 });
