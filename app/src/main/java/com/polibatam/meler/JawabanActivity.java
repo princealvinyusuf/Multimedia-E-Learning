@@ -119,7 +119,6 @@ public class JawabanActivity extends AppCompatActivity implements PasswordDialog
                     openDialog10();
                 }
 
-//                Toast.makeText(MainActivity.this, jawabans.get(position).getTitle(), Toast.LENGTH_SHORT).show();
             }
         });
     }

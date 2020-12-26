@@ -103,8 +103,8 @@ public class PraktikumActivity extends AppCompatActivity {
         dataTitle = getResources().getStringArray(R.array.data_title);
         dataSubtitle = getResources().getStringArray(R.array.data_subtitle);
         dataImage = getResources().obtainTypedArray(R.array.data_image);
-        dataPdfName = getResources().getStringArray(R.array.data_pdf);
-        dataPageName = getResources().getStringArray(R.array.data_pageName);
+        dataPdfName = getResources().getStringArray(R.array.data_pdf2);
+        dataPageName = getResources().getStringArray(R.array.data_pageName2);
     }
 
     private void addItem() {
